@@ -1,0 +1,63 @@
+/* Full-Screen Player Container */
+.player {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Back Button */
+.player img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+/* Reduce Back Button Size on Smaller Screens */
+@media (max-width: 600px) {
+    .player img {
+        width: 35px;
+        top: 15px;
+        left: 15px;
+    }
+}
+
+/* Responsive Video Player */
+.player iframe {
+    width: 80%;  /* Set 80% width for a centered look */
+    max-width: 900px;
+    aspect-ratio: 16 / 9; /* Maintain a responsive aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Adjust for Smaller Screens */
+@media (max-width: 768px) {
+    .player iframe {
+        width: 95%; /* Full width for better visibility */
+        border-radius: 5px;
+    }
+}
+
+/* Player Info Section */
+.player-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 20px;
+}
+
+/* Adjust Player Info on Smaller Screens */
+@media (max-width: 600px) {
+    .player-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
